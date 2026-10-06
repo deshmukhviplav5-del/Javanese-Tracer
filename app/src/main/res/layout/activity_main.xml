@@ -1,20 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:background="#F8F9FA" android:padding="16dp">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
-        <TextView android:id="@+id/tvKanaTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="あ (a)" android:textSize="28sp" android:textStyle="bold" android:textColor="#212121" />
-        <TextView android:id="@+id/tvScoreBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#E0E0E0" android:padding="8dp" android:text="Score: --" android:textColor="#424242" android:textSize="14sp" android:textStyle="bold" />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
+    android:padding="16dp">
+
+    <!-- Top Mode & Info Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnModeToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hiragana"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvKanaTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="あ (a)"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#212121" />
+
+        <TextView
+            android:id="@+id/tvScoreBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0E0E0"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="Score: --"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            android:textStyle="bold" />
     </LinearLayout>
-    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#FFFFFF">
-        <com.jhony.japanese.TracingView android:id="@+id/tracingView" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <!-- Tracing Canvas View -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF">
+
+        <com.jhony.japanese.TracingView
+            android:id="@+id/tracingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
-        <Button android:id="@+id/btnReplay" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Demo" />
-        <Button android:id="@+id/btnClear" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Clear" />
+
+    <!-- Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnReplay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:text="Demo" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:text="Clear" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
-        <Button android:id="@+id/btnPrev" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Previous" />
-        <Button android:id="@+id/btnNext" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Next" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:text="Previous" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:text="Next" />
     </LinearLayout>
+
 </LinearLayout>
