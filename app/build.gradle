@@ -1,0 +1,19 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.jhony.japanese'
+    compileSdk 28
+    defaultConfig {
+        applicationId "com.jhony.japanese"
+        minSdk 19
+        targetSdk 19
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs { debug { v1SigningEnabled true; v2SigningEnabled false } }
+    buildTypes { debug { signingConfig signingConfigs.debug } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+dependencies { }
